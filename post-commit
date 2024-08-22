@@ -1,0 +1,4 @@
+#!/bin/bash
+# Llamar al script update_version.sh
+./update_version.sh
+

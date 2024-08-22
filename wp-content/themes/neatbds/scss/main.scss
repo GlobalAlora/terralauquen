@@ -1,0 +1,44 @@
+@charset 'UTF-8';
+
+// Configuration and helpers
+@import 'abstracts/_variables',
+'abstracts/_functions',
+'abstracts/_mixins';
+
+// Base stuff
+@import 'base/_typography',
+'base/_base';
+
+// Components
+@import 'components/_site-logo',
+'components/_menu',
+'components/_search',
+'components/_socials',
+'components/_button',
+'components/_posts',
+'components/_animations',
+'components/_breadcrumb';
+
+// Hero
+@import 'hero/_simple';
+
+// Layout  
+@import 'layout/_header',
+'layout/_footer';
+
+// Vendor
+@import 'vendors/_fontawesome_brands',
+'vendors/_fancybox',
+'vendors/_swiper'
+;
+
+
+// Blocks
+@import 'blocks/_videos',
+'blocks/_text_block',
+'blocks/_buttons',
+'blocks/_faqs',
+'blocks/_animation',
+'blocks/_blog_ajax',
+'blocks/_slider'
+;

@@ -1,0 +1,85 @@
+<?php
+
+acf_add_local_field_group(
+	array(
+		'key' => 'group_62bb061614f91',
+		'title' => 'Analytics',
+		'fields' => array(
+			array(
+				'key' => 'field_62bb061618576',
+				'label' => 'GTM or Analytics',
+				'name' => 'analytics',
+				'type' => 'textarea',
+				'instructions' => 'Paste Analytics or GTM script for the site <head>',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => 'allow_unsafe_html',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'new_lines' => '',
+			),
+			array(
+				'key' => 'field_62bb06161857c',
+				'label' => 'Analytics (body)',
+				'name' => 'analytics_body',
+				'type' => 'textarea',
+				'instructions' => 'Paste Scripts or GTM script inside the site <body>',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => 'allow_unsafe_html',
+					'id' => '',
+				),
+				'default_value' => '',
+				'new_lines' => '',
+				'maxlength' => '',
+				'placeholder' => '',
+				'rows' => '',
+			),
+			array(
+				'key' => 'field_62bb061618585',
+				'label' => 'Analytics (footer)',
+				'name' => 'analytics_footer',
+				'type' => 'textarea',
+				'instructions' => 'Paste extra scripts to be loaded at footer (Chat, tracking analytics, code snippets, etc.)',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => 'allow_unsafe_html',
+					'id' => '',
+				),
+				'default_value' => '',
+				'new_lines' => '',
+				'maxlength' => '',
+				'placeholder' => '',
+				'rows' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options-analytics',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+		'show_in_rest' => 0,
+	)
+);

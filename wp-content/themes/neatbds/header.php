@@ -39,11 +39,10 @@
 						<?php get_template_part('modules/components/site-logo'); ?>
 					</div>
 					<div class="header__top__center">
-						<?php get_template_part('modules/components/search'); ?>
+						<?php get_template_part('modules/components/menu'); ?>
 					</div>
 					<div class="header__top__right">
-						<?php //get_template_part('modules/components/account');      ?>
-						<?php //get_template_part('modules/components/cart');      ?>
+						<?php get_template_part('modules/components/search'); ?>
 						<?php get_template_part('modules/components/responsive-btn'); ?>
 					</div>
 				</div>

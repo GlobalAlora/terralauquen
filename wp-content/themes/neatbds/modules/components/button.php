@@ -13,13 +13,13 @@ get_template_part(
 
 
 
-$button = $args['button']['link'];
-(isset($args['button']['style']) && !empty($args['button']['style'])) ? $cssclass = 'button ' . $args['button']['style'] : $cssclass = 'button';
+$button = $args['button'];
+$cssclass = $args['cssclass'];
 
-if (!empty($button)) {
-    ?>
-    <a class="<?php echo esc_attr($cssclass); ?>" href="<?php echo esc_url($button['url']); ?>" <?php echo !empty($button['target']) ? 'target="' . esc_attr($button['target']) . '"' : ''; ?>>
-        <?php echo esc_html($button['title']); ?>
-    </a>
-    <?php
+if ( ! empty( $button ) ) {
+	?>
+	<a class="<?php echo esc_attr( $cssclass ); ?>" href="<?php echo esc_url( $button['url'] ); ?>" <?php echo ! empty( $button['target'] ) ? 'target="' . esc_attr( $button['target'] ) . '"' : ''; ?>>
+	<?php echo esc_html( $button['title'] ); ?>	
+	</a>
+	<?php
 }

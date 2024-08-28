@@ -1,9 +1,10 @@
-.buttons-block {
-    margin-top: 90px;
-    text-align: center;
-    
+.button {
+    @include fontsizes(h6);
+    color: $white;
+    background: $secondary-color;
+    padding: 5px 10px;
 
-    .button {
-        margin: 10px;
+    &:hover {
+        background: $primary-color;
     }
-} 
+}

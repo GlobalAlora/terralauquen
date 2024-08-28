@@ -51,11 +51,11 @@
   }
 
   @if $heading ==h1 {
-    // custom styles for h1
+    font-family: $secondary-font !important;
   }
 
   @else if $heading ==h2 {
-    // custom styles for h2
+    font-family: $secondary-font !important;
   }
 
   @else if $heading ==h3 {

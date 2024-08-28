@@ -1,11 +1,11 @@
 /// @type List
-$default-font: 'Montserrat', sans-serif !default;
-$secondary-font: 'Montserrat', sans-serif !default;
+$default-font: 'Open Sans', sans-serif !default;
+$secondary-font: 'Lora', serif !default;
 
 /// @type Color
-$primary-color: #000 !default;
-$secondary-color: #FFD200 !default;
-$third-color: #333F44 !default;
+$primary-color: #295e8c !default;
+$secondary-color: #176332 !default;
+$third-color: #892c25 !default;
 $white: #ffffff !default;
 $grey: #dddddd !default;
 $black: #000 !default;
@@ -26,27 +26,27 @@ $font-sizes: (
   'h4': 26px,
   'h5': 18px,
   'h6': 16px,
-  'h7': 12px,
+  'h7': 14px,
   ) !default;
 
 $font-sizes-tablet: (
-  'h1': 70px,
-  'h2': 70px,
-  'h3': 28px,
-  'h4': 24px,
+  'h1': 72px,
+  'h2': 56px,
+  'h3': 30px,
+  'h4': 22px,
   'h5': 16px,
-  'h6': 16px,
+  'h6': 14px,
   'h7': 12px,
   ) !default;
 
 $font-sizes-mobile: (
-  'h1': 70px,
-  'h2': 40px,
-  'h3': 28px,
-  'h4': 24px,
-  'h5': 16px,
-  'h6': 16px,
-  'h7': 12px,
+  'h1': 48px,
+  'h2': 36px,
+  'h3': 24px,
+  'h4': 20px,
+  'h5': 14px,
+  'h6': 12px,
+  'h7': 10px, 
   ) !default;
 
 $font-weights: (

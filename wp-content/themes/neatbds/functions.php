@@ -66,7 +66,6 @@ add_action('admin_enqueue_scripts', function () {
 require get_template_directory() . '/inc/admin.php';
 require get_template_directory() . '/inc/theme.php';
 require get_template_directory() . '/inc/acf-fields.php';
-require get_template_directory() . '/inc/posttypes.php';
 require get_template_directory() . '/inc/blocks.php';
 require get_template_directory() . '/inc/acf-block-visibility.php';
 

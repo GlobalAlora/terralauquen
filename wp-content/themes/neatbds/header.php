@@ -46,9 +46,6 @@
 						<?php get_template_part('modules/components/responsive-btn'); ?>
 					</div>
 				</div>
-				<div class="header__bottom" data-block="menu">
-					<?php get_template_part('modules/components/menu'); ?>
-				</div>
 			</div>
 		</header>
 

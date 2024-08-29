@@ -5,7 +5,7 @@
     .container {
         height: 100%;
     }
-    
+
     .hero {
         &__video {
             position: absolute;
@@ -30,6 +30,10 @@
             align-items: center;
             gap: 30px;
             color: $white;
+        }
+
+        .button {
+            display: block;
         }
     }
 }

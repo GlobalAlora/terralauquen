@@ -1,0 +1,33 @@
+.site-menu {
+    display: flex;
+    gap: 20px;
+
+    &__item {
+      a {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 600;
+        color: $white;
+        position: relative;
+        text-wrap: nowrap;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            background: none repeat scroll 0 0 transparent;
+            height: 2px;
+            background: #fff;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+
+        &:hover:after { 
+            width: 100%; 
+            left: 0; 
+        }
+      }
+    }
+  }

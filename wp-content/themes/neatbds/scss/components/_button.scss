@@ -1,8 +1,13 @@
 .button {
-  @include fontsizes(h6);
+  @include fontsizes(h7);
   color: $white;
   background: $secondary-color;
-  padding: 5px 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
 
   &:hover {
     background: $primary-color;

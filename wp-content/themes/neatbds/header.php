@@ -34,15 +34,15 @@
 	<div id="page" class="site">
 		<header class="header">
 			<div class="container">
-				<div class="header__top">
-					<div class="header__top__left">
+				<div class="header__cont">
+					<div class="header__left">
 						<?php get_template_part('modules/components/site-logo'); ?>
 					</div>
-					<div class="header__top__center">
+					<div class="header__right">
 						<?php get_template_part('modules/components/menu'); ?>
-					</div>
-					<div class="header__top__right">
 						<?php get_template_part('modules/components/search'); ?>
+					</div>
+					<div class="header__right header__right--responsive">
 						<?php get_template_part('modules/components/responsive-btn'); ?>
 					</div>
 				</div>

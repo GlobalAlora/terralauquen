@@ -1,10 +1,25 @@
 .header {
-  @include row();
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 10;
-  background: $white;
+  background: transparent;
+
+  &__cont {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &--responsive {
+      display: none;
+    }
+  }
 }
 
 .scrolled {

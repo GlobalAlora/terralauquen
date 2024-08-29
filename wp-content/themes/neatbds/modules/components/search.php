@@ -1,3 +1,4 @@
 <div class="site-search">
-<?php get_search_form(); ?>
+    <button class="site-search__icon"></button>
+    <?php get_search_form(); ?>
 </div>

@@ -9,8 +9,14 @@
     }
 }
 
+.site-footer {
+    .site-logo {
+        filter: brightness(0) invert(1);
+    }
+}
+
 .scrolled {  
     .site-logo {
-    width: 150px;
+        width: 150px;
     }
 }

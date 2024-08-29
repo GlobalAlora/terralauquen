@@ -14,4 +14,8 @@ jQuery(document).ready(function ($) {
 		}, 400);
 	});
 
+	$('.site-search__icon').on('click', function(e){
+		$('.search-form').toggleClass('active');
+	});
+
 });

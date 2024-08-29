@@ -16,8 +16,10 @@
     display: flex;
     align-items: center;
     gap: 20px;
+  }
 
-    &--responsive {
+  .responsive__btn {
+    @include responsiveMin('desktop-s') {
       display: none;
     }
   }

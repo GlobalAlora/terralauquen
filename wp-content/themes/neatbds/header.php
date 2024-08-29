@@ -41,8 +41,6 @@
 					<div class="header__right">
 						<?php get_template_part('modules/components/menu'); ?>
 						<?php get_template_part('modules/components/search'); ?>
-					</div>
-					<div class="header__right header__right--responsive">
 						<?php get_template_part('modules/components/responsive-btn'); ?>
 					</div>
 				</div>

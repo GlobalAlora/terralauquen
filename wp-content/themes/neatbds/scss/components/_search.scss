@@ -77,9 +77,21 @@
 
 
 .scrolled .site-search {
+  &__icon {
+    filter: none;
+    background: none;
+    background-color: $primary-color;
+    mask-image: url(images/search.svg);
+  }
+
+  .search-form {
+    bottom: -70px;
+  }
+
   .search-field {
     outline: 1px solid $primary-color;
     color: $primary-color;
+    background: $white;
 
     &::placeholder {
       color: $primary-color;
@@ -88,8 +100,8 @@
 
   .search-submit {
     filter: none;
-    background-color: $primary-color;
-    mask-image: url(images/search.svg) center/contain no-repeat;
     background: none;
+    background-color: $primary-color;
+    mask-image: url(images/search.svg);
   }
 }

@@ -14,16 +14,17 @@ jQuery(document).ready(function ($) {
 		}, 400);
 	});
 
-	$('.site-search__icon').on('click', function(e){
+	$('.site-search__icon').on('click', function (e) {
 		$('.search-form').toggleClass('active');
 	});
 
-	$(window).on('scroll', function() {
-        if ($(this).scrollTop() > 50) {
-            $('body').addClass('scrolled');
-        } else {
-            $('body').removeClass('scrolled');
-        }
-    });
+	$(window).on('scroll', function () {
+		if ($(this).scrollTop() > 50) {
+			$('body').addClass('scrolled');
+		} else {
+			$('body').removeClass('scrolled');
+		}
+	});
 
+	$('.wpcf7-submit').addClass('button');
 });

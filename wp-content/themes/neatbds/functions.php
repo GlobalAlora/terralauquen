@@ -67,7 +67,6 @@ require get_template_directory() . '/inc/admin.php';
 require get_template_directory() . '/inc/theme.php';
 require get_template_directory() . '/inc/acf-fields.php';
 require get_template_directory() . '/inc/blocks.php';
-require get_template_directory() . '/inc/acf-block-visibility.php';
 
 $files = glob(get_template_directory() . '/inc/wp_functions/*.php');
 

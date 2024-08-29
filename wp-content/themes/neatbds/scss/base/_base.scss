@@ -93,8 +93,8 @@ strong * {
 }
 
 .container--small {
-  max-width: map-get($site-widths, max-width) + $site-padding * 4;
-  padding: 0 ($site-padding * 2) ;
+  max-width: map-get($site-widths, max-width) +  $site-padding * 2;
+  padding: 0 ($site-padding * 4) ;
 }
 
 .centerDiv {

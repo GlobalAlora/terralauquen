@@ -28,10 +28,18 @@
     &__item {
         display: flex;
         flex-direction: column;
+        text-decoration: none;
+
+        &:hover {
+            .latest_news__item__title {
+                color: $secondary-color;
+            }
+        }
 
         &__title {
             font-size: 24px;
             font-weight: 600;
+            text-decoration: none;
         }
 
         &__cont {

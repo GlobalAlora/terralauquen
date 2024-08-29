@@ -32,7 +32,7 @@ $latest_posts = new WP_Query($args);?>
         <div class="latest_news__cont">
             <?php if ($latest_posts->have_posts()) :
                 while ($latest_posts->have_posts()) : $latest_posts->the_post(); ?>
-                    <div class="latest_news__item">
+                    <a href="<?php echo the_permalink();?>" class="latest_news__item">
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="latest_news__item__image"><?php echo get_the_post_thumbnail(get_the_ID(), 'medium'); ?></div>
                         <?php endif; ?>
@@ -40,7 +40,7 @@ $latest_posts = new WP_Query($args);?>
                             <div class="latest_news__item__date"><?php echo get_the_date(); ?></div>
                             <div class="latest_news__item__title h3"><?php the_title(); ?></div>
                         </div>
-                    </div>
+                    </a>
                     <?php
                 endwhile;
                 wp_reset_postdata(); 

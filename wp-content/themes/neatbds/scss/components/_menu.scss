@@ -24,7 +24,7 @@
           left: 50%;
           background: none repeat scroll 0 0 transparent;
           height: 2px;
-          background: #fff;
+          background: $white;
           transition: width 0.3s ease 0s, left 0.3s ease 0s;
           width: 0;
       }
@@ -38,12 +38,16 @@
 }
 
 .scrolled {
-  .site-menu__item a {
-      color: $primary-color;
+  .header .site-menu__item a {
+    color: $primary-color;
+
+    &::after {
+      background: $primary-color;
     }
+  }
 
   .responsive__btn span {
-      background: $primary-color;
+    background: $primary-color;
   }
 }
 
@@ -51,9 +55,8 @@
 .responsive__btn {
   position: relative;
   z-index: 11;
-  width: 24px;
-  height: 22px;
-  position: relative;
+  width: 30px;
+  height: 25px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -63,8 +66,6 @@
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-  margin-left: 25px;
-  margin-right: 9px;
 
   @include responsiveMin('desktop-s') {
     display: none;

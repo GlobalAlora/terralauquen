@@ -32,8 +32,11 @@ do_action( 'neatbds_pre_render_block', $block ); ?>
                 </div>
             <?php endif; ?> 
             <div class="contact__content">
-                <?php if($upper_title = get_field('upper_title')): ?><div class="contact__content__upper_title"><?php echo esc_html($upper_title); ?></div><?php endif; ?>
-                <?php if($title = get_field('title')): ?><div class="contact__content__title h2"><?php echo esc_html($title); ?></div><?php endif; ?>
+                <div class="contact__content__items">
+                    <?php if($upper_title = get_field('upper_title')): ?><div class="contact__content__upper_title"><?php echo esc_html($upper_title); ?></div><?php endif;
+                    if($title = get_field('title')): ?><div class="contact__content__title h2"><?php echo esc_html($title); ?></div><?php endif; 
+                    if ($form = get_field('form')): echo do_shortcode($form); endif; ?>
+                </div>
             </div>
         </div>
     </div>

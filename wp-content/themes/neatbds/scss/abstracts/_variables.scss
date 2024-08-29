@@ -9,6 +9,7 @@ $third-color: #892c25 !default;
 $white: #ffffff !default;
 $grey: #dddddd !default;
 $black: #000 !default;
+$dark-green: #233023 !default;
 
 /// @type Length
 $site-widths: (
@@ -46,7 +47,7 @@ $font-sizes-mobile: (
   'h4': 20px,
   'h5': 14px,
   'h6': 12px,
-  'h7': 10px, 
+  'h7': 10px,
   ) !default;
 
 $font-weights: (

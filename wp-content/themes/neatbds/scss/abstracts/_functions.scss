@@ -56,6 +56,7 @@
 
   @else if $heading ==h2 {
     font-family: $secondary-font !important;
+    color: $dark-green;
   }
 
   @else if $heading ==h3 {
@@ -168,11 +169,11 @@ Aplica transformX(0px), transformY(0px) y opacity 1 para hacer aparecer el objec
 /*
 Se usa igual que fade, pero crea un loop para animar los elementos de forma ordenada
 */
-@mixin loop_fade( $x: 0px, $y: 0px, $transition: true, $initial-position: 0, $quantity: 20 ) {
+@mixin loop_fade($x: 0px, $y: 0px, $transition: true, $initial-position: 0, $quantity: 20) {
   @for $i from 1 through $quantity {
     &:nth-child(#{$i}) {
-        @include fade($x, $y, $transition, $i+$initial-position); 
-    }                
+      @include fade($x, $y, $transition, $i+$initial-position);
+    }
   }
 }
 

@@ -18,4 +18,12 @@ jQuery(document).ready(function ($) {
 		$('.search-form').toggleClass('active');
 	});
 
+	$(window).on('scroll', function() {
+        if ($(this).scrollTop() > 50) {
+            $('body').addClass('scrolled');
+        } else {
+            $('body').removeClass('scrolled');
+        }
+    });
+
 });

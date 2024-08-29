@@ -92,6 +92,11 @@ strong * {
   width: 100%;
 }
 
+.container--small {
+  max-width: map-get($site-widths, max-width) + $site-padding * 4;
+  padding: 0 ($site-padding * 2) ;
+}
+
 .centerDiv {
   display: flex;
   align-items: center;

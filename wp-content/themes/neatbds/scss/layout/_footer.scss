@@ -1,14 +1,15 @@
 .site-footer {
-  @include row();
+  background: $primary-color;
 
   &__cont {
     padding: 30px 0;
   }
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 
     @include responsive('tablet-h') {
       grid-template-columns: repeat(1, 1fr);
@@ -18,8 +19,14 @@
     }
   }
 
-  &__column {
-    position: relative;
+  &__copyright {
+    margin-top: 20px;
+
+    .copyright {
+      padding-top: 20px;
+      color: $white !important;
+      border-top: 1px solid $white;
+    }
   }
 
   &__title {
@@ -27,7 +34,6 @@
     color: $primary-color;
     margin-bottom: 20px
   }
-
 
   .copyright {
     @include fontsizes(h6);

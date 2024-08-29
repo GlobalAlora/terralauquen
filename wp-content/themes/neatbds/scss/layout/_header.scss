@@ -5,6 +5,7 @@
   width: 100%;
   z-index: 10;
   background: transparent;
+  padding: 10px 0;
 
   &__cont {
     display: flex;
@@ -26,18 +27,7 @@
   .header {
     background: $white;
     filter: drop-shadow(15px 15px 20px rgba(0, 0, 0, 0.1));
-
-    &__top-bar {
-      display: none;
-    }
-
-    &__middle {
-      padding: 20px 0;
-
-      @include responsive('tablet-h') {
-        padding: 20px;
-      }
-    }
+    color: $primary-color;
   }
 }
 

@@ -7,20 +7,20 @@
 			<div class="site-footer__container">
 				<div class="site-footer__column">
 					<?php get_template_part('modules/components/site-logo'); ?>
-					<?php get_template_part('modules/components/copyright'); ?>
-				</div>
-				<div class="site-footer__column">
-					<h3 class="site-footer__title">Column title</h3>
 					<?php get_template_part('modules/components/socials'); ?>
 				</div>
 				<div class="site-footer__column">
-					<h3 class="site-footer__title">Column title</h3>
-					<?php get_template_part('modules/components/socials'); ?>
+					<?php get_template_part('modules/components/menu'); ?>
 				</div>
 				<div class="site-footer__column">
-					<h3 class="site-footer__title">Column title</h3>
-					<?php get_template_part('modules/components/socials'); ?>
+					<h3 class="site-footer__title">Contacto</h3>
+					<div>
+						texto de prueba
+					</div>
 				</div>
+			</div>
+			<div class="site-footer__copyright">
+				<?php get_template_part('modules/components/copyright'); ?>
 			</div>
 		</div>
 	</div>

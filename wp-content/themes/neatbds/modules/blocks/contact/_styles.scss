@@ -1,0 +1,12 @@
+.contact {
+    &__cont {
+        display: flex;
+        gap: 100px
+    }
+
+    &__image {
+        width: 50%;
+        padding-top: 40%;
+        position: relative;
+    }
+}

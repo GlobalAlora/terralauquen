@@ -21,7 +21,7 @@
 
 do_action( 'neatbds_pre_render_block', $block ); ?>
 
-<section class="contact bg-white">
+<section class="contact bg--white">
     <div class="container">
         <div class="contact__cont">
             <?php if($image = get_field('image')): ?>
@@ -31,7 +31,10 @@ do_action( 'neatbds_pre_render_block', $block ); ?>
                     </div>
                 </div>
             <?php endif; ?> 
-            <div class="contact__content"></div>
+            <div class="contact__content">
+                <?php if($upper_title = get_field('upper_title')): ?><div class="contact__content__upper_title"><?php echo esc_html($upper_title); ?></div><?php endif; ?>
+                <?php if($title = get_field('title')): ?><div class="contact__content__title h2"><?php echo esc_html($title); ?></div><?php endif; ?>
+            </div>
         </div>
     </div>
 </div>

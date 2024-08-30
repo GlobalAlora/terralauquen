@@ -30,7 +30,7 @@ do_action( 'neatbds_pre_render_block', $block ); ?>
                     $link = get_sub_field('link');
                     $logo = get_sub_field('logo');?>
                     <a href="<?php echo esc_url($link['url']); ?>" class="logos__cont__item" target="<?php echo esc_attr($link['target']); ?>">
-                        <?php get_template_part('modules/components/image', null, array('image' => $logo)); ?>
+                        <div class="image-background"><?php get_template_part('modules/components/image', null, array('image' => $logo)); ?></div>
                     </a>
                 <?php endwhile; ?>
             </div>

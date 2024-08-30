@@ -1,20 +1,24 @@
 .contact {
     &__cont {
         display: flex;
-        gap: 100px
+        gap: 100px;
+
+        @include responsive('desktop-s') {
+            gap: 50px;
+        }
     }
 
     &__image {
-        width: 50%;
+        width: 100%;
         padding-top: 40%;
         position: relative;
     }
 
     &__content {
         display: flex;
-        justify-content: center;
         align-items: center;
         position: relative;
+        width: 100%;
 
         &__upper_title {
             text-transform: uppercase;
@@ -28,6 +32,10 @@
             font-size: 50px;
             font-weight: 700;
             width: 500px;
+
+            @include responsive('desktop-s') {
+                font-size: 33px;
+            }
         }
     }
 }

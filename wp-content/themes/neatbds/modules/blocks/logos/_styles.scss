@@ -1,0 +1,25 @@
+.logos {
+
+    &__title {
+        text-align: center;
+    }
+
+    &__cont {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-top: 40px;
+
+        &__item {
+            flex: 1 1 10%;
+            padding-top: 9%;
+            position: relative;
+
+            &:hover img {
+                filter: grayscale(100%);
+                transition: filter 0.3s ease;
+            }
+        }
+    }
+}

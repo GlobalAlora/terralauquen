@@ -2,11 +2,6 @@
   display: flex;
   gap: 20px;
 
-  @include  responsive(desktop-s) {
-    display: none;
-    flex-direction: column;
-  }
-
   &__item {
     a {
       display: inline-block;
@@ -37,12 +32,37 @@
   }
 }
 
-.scrolled {
-  .header .site-menu__item a {
-    color: $primary-color;
+.header .site-menu {
+  @include  responsive('desktop-s') {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    padding: 150px 30px 30px;
+    background: $secondary-color;
+    width: 100vw;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: all 1s ease;
+    overflow-y: hidden;
+  }
+}
 
-    &::after {
-      background: $primary-color;
+.scrolled {
+  .header .site-menu {
+    &__item a {
+      color: $primary-color;
+  
+      &::after {
+        background: $primary-color;
+      }
+    }
+
+    @include responsive('desktop-s') {
+      background: $white;
     }
   }
 
@@ -99,12 +119,12 @@
   }
 }
 
-.menu-responsive-open {
-  .responsive__btn {
-    span {
-      background: $white;
-    }
+.js-child-open {
+  .site-menu {
+    transform: translateY(0);
+  }
 
+  .responsive__btn {
     span:nth-child(1) {
       top: 9px;
       width: 0%;
@@ -134,5 +154,12 @@
 
   .site-menu {
     transform: translate(0,0);
+  }
+}
+
+.site-footer .site-menu {
+  @include responsive('tablet-v') {
+    flex-direction: column;
+    align-items: center;
   }
 }

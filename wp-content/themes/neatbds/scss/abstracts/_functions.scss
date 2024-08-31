@@ -57,6 +57,7 @@
   @else if $heading ==h2 {
     font-family: $secondary-font !important;
     color: $dark-green;
+    font-weight: 600;
   }
 
   @else if $heading ==h3 {

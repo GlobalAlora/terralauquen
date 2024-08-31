@@ -27,7 +27,7 @@ $args = array(
 $latest_posts = new WP_Query($args);?>
 
 <section class="latest_news bg--natural">
-    <div class="container--small">
+    <div class="container container--small">
         <?php if($title = get_field('title')): ?><div class="latest_news__title h2"><?php echo esc_html($title); ?></div><?php endif; ?>
         <div class="latest_news__cont">
             <?php if ($latest_posts->have_posts()) :

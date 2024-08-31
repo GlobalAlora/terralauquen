@@ -29,16 +29,16 @@ $text = get_field('text');
 $image_1 = get_field('image_1');
 $image_2 = get_field('image_2'); ?>
 
-<section class="image_text bg-white">
-    <div class="container--smal">
+<section class="image_text bg--white">
+    <div class="container container--smal">
         <div class="image_text__cont image_text__cont--<?php echo esc_attr($position_class); ?>" >
             <?php if($title && $text): ?>
-                <div class="image_text__cont__text">
+                <div class="image_text__text">
                     <div class="image_text__title h2"><?php echo esc_html($title); ?></div>
-                    <div class="image_text__text"><?php echo wp_kses_post($text); ?></div>
+                    <div class="image_text__text h6"><?php echo wp_kses_post($text); ?></div>
                 </div>
             <?php endif; ?>
-            <div class="image_text__cont__image">
+            <div class="image_text__images-cont <?php echo $two_image === true ? 'two-images' : ''; ?>">
                 <?php if($image_1): ?>
                     <div class="image_text__image-1">
                         <div class="image-background">

@@ -8,7 +8,7 @@
 	h4,
 	h5,
 	h6 {
-		color: $primary-color;
+		color: $dark-green;
 		margin-bottom: 20px
 	}
 
@@ -121,9 +121,9 @@
 
 @mixin bg() {
 	padding: 100px 0;
-  
+
 	@include responsive('tablet-v') {
-	  padding: 80px 0;
+		padding: 80px 0;
 	}
 }
 
@@ -131,7 +131,7 @@
 	@include bg();
 	background: #faf7f0;
 }
-  
+
 .bg--white {
 	@include bg();
 }

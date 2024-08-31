@@ -1,5 +1,4 @@
 .logos {
-
     &__title {
         text-align: center;
     }
@@ -19,6 +18,11 @@
             &:hover img {
                 filter: grayscale(100%);
                 transition: filter 0.3s ease;
+            }
+
+            @include responsive('mobile-h') {
+                flex: 1 1 40%;
+                height: 100px;
             }
         }
     }

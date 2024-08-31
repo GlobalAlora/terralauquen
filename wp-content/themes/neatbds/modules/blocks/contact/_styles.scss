@@ -1,25 +1,30 @@
 .contact {
     &__cont {
         display: flex;
-        gap: 100px;
+        align-items: center;
+        gap: 5%;
 
         @include responsive('desktop-s') {
-            gap: 50px;
+            gap: 30px;
+            align-items: unset;
+        }
+
+        @include responsive('tablet-v') {
+            flex-direction: column;
         }
     }
 
     &__image {
-        width: 100%;
+        aspect-ratio: 640/550;
         padding-top: 40%;
         position: relative;
+        max-width: 640px;
     }
 
     &__content {
-        display: flex;
-        align-items: center;
-        position: relative;
+        display: block;
         width: 100%;
-
+        
         &__upper_title {
             text-transform: uppercase;
             color: $dark-green;
@@ -32,9 +37,11 @@
             font-size: 50px;
             font-weight: 700;
             width: 500px;
+            max-width: 100%;
 
             @include responsive('desktop-s') {
                 font-size: 33px;
+                width: auto;
             }
         }
     }
@@ -44,28 +51,67 @@
     padding-top: 20px;
 
     &__cont {
-        display: flex;
-        justify-content: space-between;
-        gap: 50px;
-        padding-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        @include responsive('desktop-s') {
+            grid-template-columns: 100%;
+        }
     }
 
     &__item {
         input {
-            height: 50px !important;
+            height: 50px;
             width: 100%;
-            min-height: 40px;
-            padding: 6px 0;
+            padding: 6px 10px;
+            border: 1px solid $grey;
+            border-radius: 5px;
+
+            &:focus {
+                outline: 1px solid $secondary-color;
+            }
+
+            &:active {
+                outline: 1px solid $secondary-color;
+            }
+        }
+
+        textarea {
+            min-height: 50px;
+            padding: 6px 10px;
             width: 100%;
             height: 100%;
-            border-bottom: 1px solid $grey;
+            border: 1px solid $grey;
+            border-radius: 5px;
 
+            &:focus {
+                outline: 1px solid $secondary-color;
+            }
+
+            &:active {
+                outline: 1px solid $secondary-color;
+            }
         }
     }
 
     &__button {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        padding-top: 20px;
+    }
+}
+
+.wpcf7 {
+    & form.invalid .wpcf7-response-output {
+        margin: 10px 0;
+        border-color: #dc3232;
+        border-radius: 5px;
+        color: $black;
+    }
+
+    & form.sent .wpcf7-response-output {
+        margin: 10px 0;
+        border-color: $secondary-color;
+        border-radius: 5px;
+        color: $black;
     }
 }

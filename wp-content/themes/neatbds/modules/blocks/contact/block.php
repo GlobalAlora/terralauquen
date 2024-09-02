@@ -21,7 +21,7 @@
 
 do_action( 'neatbds_pre_render_block', $block ); ?>
 
-<section class="contact bg--white">
+<section class="contact bg--white" data-waypoint=".25">
     <div class="container">
         <div class="contact__cont">
             <?php if($image = get_field('image')): ?>
@@ -40,4 +40,4 @@ do_action( 'neatbds_pre_render_block', $block ); ?>
             </div>
         </div>
     </div>
-</div>
+</section>

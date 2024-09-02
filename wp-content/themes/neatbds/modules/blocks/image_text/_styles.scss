@@ -8,6 +8,7 @@
         &--izquierda {
             .image_text__images-cont {
                     order: -1;
+                    @include fade(-50px, 0, true, 1);
             }
 
             .two-images {
@@ -20,6 +21,10 @@
                     left: unset !important;
                 }
             }
+
+            .image_text__text {
+                @include fade(50px, 0, true, 2);
+            }
         }
 
         @include responsive('tablet-h') {
@@ -30,6 +35,12 @@
     &__text {
         color: $black;
         margin-top: 20px;
+
+        @include fade(-50px, 0, true, 1);
+    }
+
+    &__images-cont {
+        @include fade(50px, 0, true, 2);
     }
 
     &__image-1 {

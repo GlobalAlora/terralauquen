@@ -21,7 +21,7 @@
 do_action('neatbds_pre_render_block', $block);
 if( $video = get_field('video') ):
 ?>
-    <section class="hero hero--home">
+    <section class="hero hero--home" data-waypoint=".05">
         <div class="container">
             <div class="hero__video">
                 <?php echo '<video preload autoplay loop playsinline muted><source src="' . esc_attr($video) . '#t=0.1" type="video/mp4"></video>'; ?>

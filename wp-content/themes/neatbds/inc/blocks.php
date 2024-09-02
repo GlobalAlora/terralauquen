@@ -256,28 +256,35 @@ Wrap default wp blocks in a container
 add_filter('render_block', 'wrap_classic_block', 10, 2);
 function wrap_classic_block( $block_content, $block )
 {
+    // Solo continuar si hay contenido en el bloque
+    if (trim($block_content) === '') {
+        return $block_content;
+    }
 
-    if ($block['blockName'] && $block['blockName'] != "core/block" && substr($block['blockName'], 0, 3) != 'acf' 
-    ) {
-           $blockclass = explode('/', $block['blockName']); 
-        if ($blockclass[1] == "button" ) { $blockclass[1] = "button-block";
+    if (isset($block['blockName']) && $block['blockName'] != "core/block" && substr($block['blockName'], 0, 3) != 'acf') {
+        $blockclass = explode('/', $block['blockName']); 
+
+        if ($blockclass[1] == "button") {
+            $blockclass[1] = "button-block";
         }
+
         $block_content_return = '<div class="container '.$blockclass[1].' default_block ">';
         $block_content_return .= $block_content;
         $block_content_return .= '</div>';
 
         return $block_content_return;
     }
-    if ($block['blockName'] == "" ) { //clasic
+
+    if ($block['blockName'] == "") { // clasic
         $block_content_return = '<div class="container default_block classic">';
         $block_content_return .= $block_content;
         $block_content_return .= '</div>';
 
         return $block_content_return;
     }
+
     return $block_content;
 }
-
 
 
 

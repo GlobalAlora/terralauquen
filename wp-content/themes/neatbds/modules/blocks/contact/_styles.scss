@@ -19,11 +19,13 @@
         padding-top: 40%;
         position: relative;
         max-width: 640px;
+        @include fade(-50px, 0, true, 1);
     }
 
     &__content {
         display: block;
         width: 100%;
+        @include fade(50px, 0, true, 2);
         
         &__upper_title {
             text-transform: uppercase;

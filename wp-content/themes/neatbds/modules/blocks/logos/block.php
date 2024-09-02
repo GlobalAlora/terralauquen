@@ -21,7 +21,7 @@
 
 do_action( 'neatbds_pre_render_block', $block ); ?>
 
-<section class="logos bg--white">
+<section class="logos bg--white" data-waypoint=".25">
     <div class="container container--small">
         <?php if($title = get_field('title')):?><h2 class="logos__title h2"><?php echo esc_html($title);?></h2><?php endif?>
         <?php if( have_rows('logos') ): ?>

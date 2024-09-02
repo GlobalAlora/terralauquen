@@ -1,6 +1,7 @@
 .logos {
     &__title {
         text-align: center;
+        @include fade(0, 50px, true, 1);
     }
 
     &__cont {
@@ -9,6 +10,7 @@
         flex-wrap: wrap;
         gap: 20px;
         padding-top: 40px;
+        @include fade(0, 50px, true, 2);
 
         &__item {
             flex: 1 1 10%;

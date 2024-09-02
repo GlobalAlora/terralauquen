@@ -26,7 +26,7 @@ $args = array(
 );
 $latest_posts = new WP_Query($args);?>
 
-<section class="latest_news bg--natural">
+<section class="latest_news bg--natural" data-waypoint=".25">
     <div class="container container--small">
         <?php if($title = get_field('title')): ?><div class="latest_news__title h2"><?php echo esc_html($title); ?></div><?php endif; ?>
         <div class="latest_news__cont">

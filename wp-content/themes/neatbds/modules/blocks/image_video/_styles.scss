@@ -1,6 +1,7 @@
 .image_video {
     &__title {
         text-align: center;
+        @include fade(0, 50px, true, 1);
     }
 
     &__cont {
@@ -19,6 +20,8 @@
             width: 100%;
             display: flex;
             gap: 20px;
+            aspect-ratio: 4/3;
+            @include fade(-50px, 0, true, 2);
         }
     }
 
@@ -27,6 +30,14 @@
         flex: 1;
         position: relative;
         width: 100%;
+        height: 100%;
+
+        img,
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__video {
@@ -64,6 +75,6 @@
         width: 100%;
         color: $black;
         @include text_block();
-
+        @include fade(50px, 0, true, 3);
     }
 }

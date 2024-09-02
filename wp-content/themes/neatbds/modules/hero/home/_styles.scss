@@ -43,6 +43,7 @@
             align-items: center;
             gap: 30px;
             color: $white;
+            @include fade(0, 50px, true, 1);
         }
         
         &__title {

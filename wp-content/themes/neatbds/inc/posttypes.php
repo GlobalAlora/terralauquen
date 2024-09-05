@@ -28,7 +28,7 @@ register_post_type(
 		'menu_position' => 18,
 		'query_var' => true,
 		'supports' => array('title', 'thumbnail'),
-		'rewrite' => array('slug' => 'Equipo', 'with_front' => false),
+		'rewrite' => array('slug' => 'Equipo', 'with_front' => true),
 		'can_export' => true
 	)
 );

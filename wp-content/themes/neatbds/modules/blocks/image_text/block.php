@@ -30,7 +30,7 @@ $image_1 = get_field('image_1');
 $image_2 = get_field('image_2'); ?>
 
 <section class="image_text bg--white" data-waypoint=".25">
-    <div class="container container--smal">
+    <div class="container container--small">
         <div class="image_text__cont image_text__cont--<?php echo esc_attr($position_class); ?>" >
             <?php if($title && $text): ?>
                 <div class="image_text__text">

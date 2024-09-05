@@ -24,19 +24,17 @@ $imagen_o_video = get_field('imagen_o_video');
 $imagevideo_class = $imagen_o_video == 'imagen' ? 'imagen' : 'video'; ?>
 
 <section class="image_fullwidth image_fullwidth--<?php echo esc_attr($imagevideo_class); ?> bg--white" data-waypoint=".25">
-    <div class="container container--small">
-        <?php if ($imagen_o_video == 'imagen'):?>
-            <div class="image_fullwidth__image">
-                <div class="image-background">
-                    <?php $image = get_field('image'); ?>
-                    <?php get_template_part('modules/components/image', null, array('image' => $image)); ?>
-                </div>
+    <?php if ($imagen_o_video == 'imagen'):?>
+        <div class="image_fullwidth__image">
+            <div class="image-background">
+                <?php $image = get_field('image'); ?>
+                <?php get_template_part('modules/components/image', null, array('image' => $image)); ?>
             </div>
-        <?php else: ?>
-            <div class="image_fullwidth__video">
-                <?php $video = get_field('video'); ?>
-                <?php echo '<video reload playsinline controls autoplay muted><source src="' . esc_attr($video) . '#t=0.1" type="video/mp4"></video>'; ?>
-            </div> 
-        <?php endif;?>
-    </div>
+        </div>
+    <?php else: ?>
+        <div class="image_fullwidth__video">
+            <?php $video = get_field('video'); ?>
+            <?php echo '<video reload playsinline controls autoplay muted><source src="' . esc_attr($video) . '#t=0.1" type="video/mp4"></video>'; ?>
+        </div> 
+    <?php endif;?>
 </section>

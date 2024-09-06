@@ -5,6 +5,11 @@
         gap: 5%;
         align-items: center;
 
+        @include responsive('tablet-h') {
+            grid-template-columns: 100%;
+            gap: 30px;
+        }
+
         &--izquierda {
             .image_text__images-cont {
                     order: -1;
@@ -25,10 +30,6 @@
             .image_text__text {
                 @include fade(50px, 0, true, 2);
             }
-        }
-
-        @include responsive('tablet-h') {
-            grid-template-columns: 100%;
         }
     }
 

@@ -20,7 +20,8 @@
 'components/_breadcrumb';
 
 // Hero
-@import '../modules/hero/home/_styles';
+@import '../modules/hero/home/_styles',
+'../modules/hero/simple/_styles';
 
 // Layout  
 @import 'layout/_header',

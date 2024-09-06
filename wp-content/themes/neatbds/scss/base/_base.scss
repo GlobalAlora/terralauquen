@@ -90,12 +90,20 @@ strong * {
   margin: 0 auto;
   padding: 0 $site-padding;
   width: 100%;
+
+  @include responsive('desktop-s') {
+    padding: 0 ($site-padding / 2);
+  }
 }
 
 .container--small {
   @include responsiveMin('desktop-s') {
     max-width: map-get($site-widths, max-width) +  $site-padding * 2;
     padding: 0 ($site-padding * 4) ;
+
+    @include responsive('desktop-s') {
+      padding: 0 60px;
+    }
   }
 }
 

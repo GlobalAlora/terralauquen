@@ -8,26 +8,32 @@ $args = array(
 );
 $team = new WP_Query($args);?>
 
-<section class="team bg--natural">
-    <div class="container--small">
+<section class="team bg--natural" data-waypoint=".25">
+    <div class="container container--small">
+        <div class="team__upper">
+            <?php echo (!empty($title = get_field('title'))) ? '<h2 class="team__title h2"> ' . wp_kses_post($title) . ' </h2>' : ''; ?>
+            <?php echo (!empty($text = get_field('text'))) ? '<div class="team__text h4"> ' . wp_kses_post($text) . ' </div>' : ''; ?>
+        </div>
         <div class="team__cont">
             <?php if ($team->have_posts()) :
                 while ($team->have_posts()) : $team->the_post(); ?>
                     <div class="team__item">
                         <?php if (has_post_thumbnail()) : ?>
-                            <div class="team__item__image"><?php echo get_the_post_thumbnail(get_the_ID(), 'medium'); ?></div>
+                            <div class="team__item__image">
+                                <div class="image-background">
+                                    <?php echo get_the_post_thumbnail(get_the_ID(), 'medium'); ?>
+                                </div>
+                            </div>
                         <?php endif; ?>
                         <div class="team__item__cont">
-                            <div class="team__item__title h3"><?php the_title(); ?></div>
+                            <div class="team__item__title h4"><?php the_title(); ?></div>
+                            <div class="team__item__position h5">Aca va posicion</div>
                         </div>
                     </div>
                     <?php
                 endwhile;
                 wp_reset_postdata(); 
             endif;?>
-        </div>
-        <div class="team__button">
-            <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="button">Ver más Noticias</a>
         </div>
     </div>
 </section>

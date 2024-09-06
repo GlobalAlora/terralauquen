@@ -27,7 +27,7 @@ register_post_type(
 		'show_ui' => true,
 		'menu_position' => 18,
 		'query_var' => true,
-		'supports' => array('title', 'thumbnail'),
+		'supports' => array('title', 'thumbnail', 'editor'),
 		'rewrite' => array('slug' => 'Equipo', 'with_front' => false),
 		'can_export' => true
 	)

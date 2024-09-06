@@ -121,3 +121,7 @@ strong * {
     @include absolute();
   }
 }
+
+.site {
+  overflow: hidden;
+}

@@ -37,7 +37,7 @@ do_action( 'neatbds_pre_render_block', $block ); ?>
                     $image = get_field('image', 'categorias_' . $term->term_id); ?>
                     <a href="<?php echo esc_url($term_link); ?>" class="product-categories__item">
                         <div class="image-background"><?php get_template_part('modules/components/image', null, array('image' => $image));?></div>
-                        <span><?php echo esc_html($term->name); ?></span>
+                        <span class="h3"><?php echo esc_html($term->name); ?></span>
                     </a>
                 <?php }
             echo '</div>';

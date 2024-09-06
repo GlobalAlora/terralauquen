@@ -1,12 +1,10 @@
 .image_fullwidth {
     &__image {
-        aspect-ratio: 16/8;
         position: relative;
         @include fade(0, 50px, true, 1);
     }
 
     &__video {
-        aspect-ratio: 16/8;
         @include fade(0, 50px, true, 1);
 
         video {

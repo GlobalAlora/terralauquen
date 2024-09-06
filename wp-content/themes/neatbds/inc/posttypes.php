@@ -34,28 +34,52 @@ register_post_type(
 );
 
 register_post_type(
-	'Productos',
+	'productos',
 	array(
 		'labels' => array(
 			'name' => __('Productos'),
-			'singular_name' => __('Productos'),
-			'add_new' => __('Nuevo Productos'),
+			'singular_name' => __('Producto'),
+			'add_new' => __('Nuevo Producto'),
 			'add_new_item' => __('Nuevo Producto'),
-			'edit' => __('Editar Productos item'),
-			'edit_item' => __('Editar Productos item'),
-			'new_item' => __('Nuevo Productos item'),
-			'view' => __('Ver Productos item'),
-			'view_item' => __('Ver Productos item'),
-			'search_items' => __('Search Productos items'),
-			'not_found' => __('Not found'),
-			'not_found_in_trash' => __('Not found'),
+			'edit' => __('Editar Producto'),
+			'edit_item' => __('Editar Producto'),
+			'new_item' => __('Nuevo Producto'),
+			'view' => __('Ver Producto'),
+			'view_item' => __('Ver Producto'),
+			'search_items' => __('Buscar Productos'),
+			'not_found' => __('No encontrado'),
+			'not_found_in_trash' => __('No encontrado en la papelera'),
 		),
 		'public' => true,
 		'show_ui' => true,
 		'menu_position' => 18,
 		'query_var' => true,
 		'supports' => array('title', 'thumbnail', 'editor'),
-		'rewrite' => array('slug' => 'Productos', 'with_front' => true),
-		'can_export' => true
+		'rewrite' => array('slug' => 'productos', 'with_front' => true),
+		'can_export' => true,
+	)
+);
+
+register_taxonomy(
+	'categorias',
+	'productos',
+	array(
+		'labels' => array(
+			'name' => __('Categorias'),
+			'singular_name' => __('Categoria'),
+			'search_items' => __('Buscar Categorias'),
+			'all_items' => __('Todas las Categorias'),
+			'edit_item' => __('Editar Categoria'),
+			'update_item' => __('Actualizar Categoria'),
+			'add_new_item' => __('Agregar Nueva Categoria'),
+			'new_item_name' => __('Nuevo Nombre de Categoria'),
+			'menu_name' => __('Categorias'),
+		),
+		'hierarchical' => true, 
+		'public' => true,
+		'show_ui' => true,
+		'show_in_nav_menus' => true,
+		'show_tagcloud' => false,
+		'rewrite' => array('slug' => 'Categorias'),
 	)
 );

@@ -5,42 +5,49 @@ $term = get_queried_object(); ?>
 
 <section class="products-listing bg--white">
     <div class="container">
-        <h1 class="h2"><?php echo esc_html($term->name);?></h1>
-        <?php
-        $args = array(
-            'post_type' => 'productos', 
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'categorias',
-                    'field' => 'term_id',
-                    'terms' => $term->term_id,
-                ),
-            ),
-        );
-        $productos_query = new WP_Query($args);
+        <h1 class="products-listing__title h2"><?php echo esc_html($term->name);?></h1>
+        <div class="products-listing__cont">
+            <div class="products-listing__filters">Aca van los filtros</div>
 
-        if ($productos_query->have_posts()) {
-            echo '<div class="product-list">';
-            while ($productos_query->have_posts()) {
-                $productos_query->the_post();?>
-                <div class="product-item">
-                    <a href="<?php the_permalink(); ?>" class="product-link">
+            <?php
+            $args = array(
+                'post_type' => 'productos', 
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'categorias',
+                        'field' => 'term_id',
+                        'terms' => $term->term_id,
+                    ),
+                ),
+            );
+            $productos_query = new WP_Query($args);
+
+            if ($productos_query->have_posts()) {
+                echo '<div class="products-listing__grid">';
+                while ($productos_query->have_posts()) {
+                    $productos_query->the_post();?>
+                    <div class="product-item">
+                        <?php /*<a href="<?php the_permalink(); ?>" class="product-link"> */ ?>
                         <?php if (has_post_thumbnail()) { ?>
-                            <div class="product-image"><?php the_post_thumbnail('medium'); ?></div>
+                            <div class="product-image">
+                                <div class="image-background">
+                                    <?php the_post_thumbnail('medium'); ?>
+                                </div>
+                            </div>
                         <?php } ?>
                         <div class="product-info">
-                            <h2 class="product-title"><?php the_title(); ?></h2>
+                            <h2 class="product-title h4"><?php the_title(); ?></h2>
                         </div>
-                    </a>
-                </div>
-                <?php
+                        <a class="product-link button" href="#">Descargar pdf</a>
+                    </div>
+                    <?php
+                }
+                echo '</div>';
+            } else {
+                echo '<p>No hay productos en esta categoría.</p>';
             }
-            echo '</div>';
-        } else {
-            echo '<p>No hay productos en esta categoría.</p>';
-        }
-
-        wp_reset_postdata();?>
+            wp_reset_postdata();?>
+        </div>
     </div>
 </section>
 

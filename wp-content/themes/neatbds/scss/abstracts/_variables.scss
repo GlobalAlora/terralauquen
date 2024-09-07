@@ -3,13 +3,24 @@ $default-font: 'Open Sans', sans-serif !default;
 $secondary-font: 'Lora', serif !default;
 
 /// @type Color
-$primary-color: #295e8c !default;
-$secondary-color: #176332 !default;
-$third-color: #892c25 !default;
+// colores principales
+$primary-color: #295e8c !default;  // color base, usar titulos o botones importantes
+$secondary-color: #176332 !default;  // elementos secundarios o detalles
+$third-color: #892c25 !default; // elementos clave, action buttons o alertas
+// complementarios
+$light-black: #4d4d4d !default; // Usar para subtitulos o encabezados menores
+$dark-grey: #333333 !default; // Usar para titulos principales
+// background
+$light-primary: #e0eff6 !default; // complementario con $primary-color
+$light-secondary: #e6f5e9 !default; // complementario con $secondary-color
+$grey: #f4f4f4 !default; // secciones neutras o transicion, antes #dddddd
+//textos
+$light-black: #555555 !default; // paragraph
+$mid-grey: #777777 !default; // descripciones o detalles menores
+// basicos
 $white: #ffffff !default;
-$grey: #dddddd !default;
 $black: #000 !default;
-$dark-grey: #333333 !default;
+//eliminar
 $dark-green: #233023 !default;
 
 /// @type Length

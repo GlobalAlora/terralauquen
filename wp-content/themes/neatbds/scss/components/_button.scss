@@ -1,4 +1,4 @@
-.button {
+@mixin button() {
   @include fontsizes(h7);
   color: $white;
   background: $secondary-color;
@@ -12,4 +12,8 @@
   &:hover {
     background: $primary-color;
   }
+}
+
+.button {
+  @include button();
 }

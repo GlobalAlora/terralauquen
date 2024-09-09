@@ -6,6 +6,22 @@ acf_add_local_field_group(
 		'title' => 'General',
 		'fields' => array(
 			array(
+				'key' => 'field_general_tab',
+				'label' => 'General',
+				'name' => '',
+				'type' => 'tab',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'placement' => 'top',
+				'endpoint' => 0,
+			),
+			array(
 				'key' => 'field_6093fae084495',
 				'label' => 'Site Logo',
 				'name' => 'site_logo',
@@ -174,6 +190,39 @@ acf_add_local_field_group(
 				'append' => '',
 				'maxlength' => '',
 			),
+			array(
+				'key' => 'field_product_tab',
+				'label' => 'Productos',
+				'name' => '',
+				'type' => 'tab',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'placement' => 'top',
+				'endpoint' => 0,
+			),
+			array(
+				'key' => 'field_button_title',
+				'label' => 'Título del botón',
+				'name' => 'button_title',
+				'type' => 'text',
+				'instructions' => 'Introduce el título del botón para productos',
+				'required' => 0,
+				'wrapper' => array(
+					'width' => '50',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+
 		),
 		'location' => array(
 			array(

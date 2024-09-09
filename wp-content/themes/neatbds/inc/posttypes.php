@@ -57,6 +57,7 @@ register_post_type(
 		'supports' => array('title', 'thumbnail', 'editor'),
 		'rewrite' => array('slug' => 'productos', 'with_front' => true),
 		'can_export' => true,
+		'publicly_queryable' => false,
 	)
 );
 

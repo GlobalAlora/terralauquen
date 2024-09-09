@@ -1,7 +1,8 @@
 <?php
 get_header(); 
 
-$term = get_queried_object(); ?>
+$term = get_queried_object(); 
+$button_title = get_field('button_title', 'option');?>
 
 <section class="products-listing bg--white">
     <div class="container">
@@ -25,7 +26,8 @@ $term = get_queried_object(); ?>
             if ($productos_query->have_posts()) {
                 echo '<div class="products-listing__grid">';
                 while ($productos_query->have_posts()) {
-                    $productos_query->the_post();?>
+                    $productos_query->the_post();
+                    $pdf_file = get_field('pdf'); ?>
                     <div class="product-item">
                         <?php /*<a href="<?php the_permalink(); ?>" class="product-link"> */ ?>
                         <?php if (has_post_thumbnail()) { ?>
@@ -38,7 +40,11 @@ $term = get_queried_object(); ?>
                         <div class="product-info">
                             <h2 class="product-title h4"><?php the_title(); ?></h2>
                         </div>
-                        <a class="product-link button" href="#">Descargar pdf</a>
+                        <?php if( $pdf_file ) {
+                            $pdf_url = $pdf_file['url'];                        
+                            $button_title = $button_title ? $button_title : 'Descargar PDF';
+                            echo '<a href="' . esc_url($pdf_url) . '" download class="product-link button">' . esc_html($button_title) . '</a>';
+                        } ?>
                     </div>
                     <?php
                 }

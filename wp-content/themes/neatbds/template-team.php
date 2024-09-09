@@ -29,7 +29,7 @@ $team = new WP_Query($args);?>
                         <?php endif; ?>
                         <div class="team__item__cont">
                             <div class="team__item__title h5"><?php the_title(); ?></div>
-                            <div class="team__item__position h6">Aca va posicion</div>
+                            <?php echo (!empty($workstation = get_field('workstation'))) ? '<div class="team__item__position h6"> ' . wp_kses_post($workstation) . ' </div>' : ''; ?>
                         </div>
                     </div>
                     <?php

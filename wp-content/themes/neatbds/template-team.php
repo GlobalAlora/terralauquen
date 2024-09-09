@@ -21,7 +21,7 @@ $team = new WP_Query($args);?>
                 while ($team->have_posts()) : $team->the_post(); ?>
                     <div class="team__item">
                         <?php if (has_post_thumbnail()) : ?>
-                            <div class="team__item__image">
+                            <div class="team__item__image s">
                                 <div class="image-background">
                                     <?php echo get_the_post_thumbnail(get_the_ID(), 'medium'); ?>
                                 </div>

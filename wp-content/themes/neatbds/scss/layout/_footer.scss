@@ -11,7 +11,7 @@
     align-items: center;
     gap: 20px;
 
-    @include responsive('tablet-h') {
+    @include responsive('desktop-s') {
       flex-direction: column;
     }
   }
@@ -28,8 +28,12 @@
 
   &__title {
     @include fontsizes(h6);
-    color: $primary-color;
-    margin-bottom: 20px
+    color: $white;
+    margin-bottom: 10px;
+
+    @include responsive('desktop-s') {
+      text-align: center;
+    }
   }
 
   .copyright {

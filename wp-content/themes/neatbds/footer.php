@@ -7,16 +7,13 @@
 			<div class="site-footer__container">
 				<div class="site-footer__column">
 					<?php get_template_part('modules/components/site-logo'); ?>
-					<?php get_template_part('modules/components/socials'); ?>
 				</div>
 				<div class="site-footer__column">
 					<?php get_template_part('modules/components/menu'); ?>
 				</div>
 				<div class="site-footer__column">
-					<h3 class="site-footer__title">Contacto</h3>
-					<div>
-						texto de prueba
-					</div>
+					<h3 class="site-footer__title">Redes Sociales</h3>
+					<?php get_template_part('modules/components/socials'); ?>
 				</div>
 			</div>
 			<div class="site-footer__copyright">

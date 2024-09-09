@@ -98,8 +98,8 @@ strong * {
 
 .container--small {
   @include responsiveMin('desktop-s') {
-    max-width: map-get($site-widths, max-width) +  $site-padding * 2;
-    padding: 0 ($site-padding * 4) ;
+    max-width: map-get($site-widths, max-width) + $site-padding * 2;
+    padding: 0 ($site-padding * 4);
 
     @include responsive('desktop-s') {
       padding: 0 60px;
@@ -124,4 +124,35 @@ strong * {
 
 .site {
   overflow: hidden;
+}
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 50px;
+  border-radius: 15px;
+  background: #25d366;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  box-shadow: #333 0 0 10px;
+  z-index: 1000;
+  padding: 5px 5px 0;
+}
+
+@media only screen and (max-width: 1099px) {
+  .btn-whatsapp {
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+.btn-whatsapp svg {
+  max-width: 80%;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-10%);
+  transition: all 0.5s;
 }

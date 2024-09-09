@@ -28,8 +28,8 @@ $team = new WP_Query($args);?>
                             </div>
                         <?php endif; ?>
                         <div class="team__item__cont">
-                            <div class="team__item__title h4"><?php the_title(); ?></div>
-                            <div class="team__item__position h5">Aca va posicion</div>
+                            <div class="team__item__title h5"><?php the_title(); ?></div>
+                            <div class="team__item__position h6">Aca va posicion</div>
                         </div>
                     </div>
                     <?php

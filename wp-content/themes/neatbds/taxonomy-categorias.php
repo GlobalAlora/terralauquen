@@ -6,9 +6,30 @@ $button_title = get_field('button_title', 'option');?>
 
 <section class="products-listing bg--white">
     <div class="container">
-        <h1 class="products-listing__title h2"><?php echo esc_html($term->name);?></h1>
+        <h1 class="products-listing__title h2"><?php echo esc_html($term->name); ?></h1>
         <div class="products-listing__cont">
-            <div class="products-listing__filters">Aca van los filtros</div>
+            <div class="products-listing__filters">
+                <div class="products-listing__filters__title h6">Filtrar productos</div>
+                <?php
+                $parent_term_id = $term->parent ? $term->parent : $term->term_id;
+                $subcategories = get_terms(array(
+                    'taxonomy' => 'categorias',
+                    'hide_empty' => false,
+                    'parent' => $parent_term_id,
+                ));
+
+                if (!empty($subcategories) && !is_wp_error($subcategories)) {
+                    echo '<ul class="filters-list">';
+                    foreach ($subcategories as $subcategory) {
+                        $subcategory_link = get_term_link($subcategory);
+                        echo '<li><a href="' . esc_url($subcategory_link) . '">' . esc_html($subcategory->name) . '</a></li>';
+                    }
+                    echo '</ul>';
+                } else {
+                    echo '<p>No hay subcategorías disponibles.</p>';
+                }
+                ?>
+            </div>
 
             <?php
             $args = array(
@@ -29,7 +50,6 @@ $button_title = get_field('button_title', 'option');?>
                     $productos_query->the_post();
                     $pdf_file = get_field('pdf'); ?>
                     <div class="product-item">
-                        <?php /*<a href="<?php the_permalink(); ?>" class="product-link"> */ ?>
                         <?php if (has_post_thumbnail()) { ?>
                             <div class="product-image">
                                 <div class="image-background">
@@ -40,7 +60,7 @@ $button_title = get_field('button_title', 'option');?>
                         <div class="product-info">
                             <h2 class="product-title h4"><?php the_title(); ?></h2>
                         </div>
-                        <?php if( $pdf_file ) {
+                        <?php if ($pdf_file) {
                             $pdf_url = $pdf_file['url'];                        
                             $button_title = $button_title ? $button_title : 'Descargar PDF';
                             echo '<a href="' . esc_url($pdf_url) . '" download class="product-link button">' . esc_html($button_title) . '</a>';
@@ -56,6 +76,7 @@ $button_title = get_field('button_title', 'option');?>
         </div>
     </div>
 </section>
+
 
 <?php
 get_footer(); // Incluir el pie de página del tema

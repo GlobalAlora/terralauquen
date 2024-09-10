@@ -28,6 +28,7 @@ do_action( 'neatbds_pre_render_block', $block ); ?>
         $terms = get_terms(array(
             'taxonomy' => 'categorias',
             'hide_empty' => false,
+            'parent' => 0,
         ));
 
         if (!empty($terms) && !is_wp_error($terms)) {

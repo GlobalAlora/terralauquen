@@ -29,7 +29,7 @@
         
         &__upper_title {
             text-transform: uppercase;
-            color: $dark-green;
+            color: $secondary-color;
             letter-spacing: 1px;
             font-weight: 800;
             padding-bottom: 10px;
@@ -99,21 +99,37 @@
 
     &__button {
         padding-top: 20px;
+
+        input {
+            @include button();
+        }
     }
 }
 
 .wpcf7 {
     & form.invalid .wpcf7-response-output {
         margin: 10px 0;
-        border-color: #dc3232;
+        border-color: $third-color;
         border-radius: 5px;
-        color: $black;
+        color: $third-color;
+        font-family: $secondary-font;
+        font-size: 16px;
     }
 
     & form.sent .wpcf7-response-output {
         margin: 10px 0;
         border-color: $secondary-color;
         border-radius: 5px;
-        color: $black;
+        color: $secondary-color;
+        font-family: $secondary-font;
+        font-size: 16px;
+    }
+
+    &-not-valid-tip {
+        margin-top: 3px;
+        color: $third-color;
+        padding-left: 2px;
+        font-family: $secondary-font;
+        font-size: 16px;
     }
 }

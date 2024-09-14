@@ -127,16 +127,36 @@
 	}
 }
 
-.bg--natural {
-	@include bg();
-	background: #faf7f0;
-}
+.bg {
+	&--white {
+		@include bg();
+	}
 
-.bg--white {
-	@include bg();
+	&--natural {
+		@include bg();
+		background: $natural;
+	}
+
+	&--grey {
+		@include bg();
+		background: $grey;
+	}
+
+	&--blue {
+		@include bg();
+		background: $light-primary;
+	}
+
+	&--green {
+		@include bg();
+		background: $light-secondary;
+	}
 }
 
 .bg--white + .bg--white,
-.bg--natural + .bg--natural {
+.bg--natural + .bg--natural,
+.bg--grey + .bg--grey,
+.bg--blue + .bg--blue,
+.bg--green + .bg--green {
 	padding-top: 0;
 }

@@ -10,7 +10,7 @@ $team = new WP_Query($args);?>
 
 <?php get_template_part('modules/hero/simple/block'); ?>
 
-<section class="team bg--natural" data-waypoint=".25">
+<section class="team bg--grey" data-waypoint=".25">
     <div class="container container--small">
         <div class="team__upper">
             <?php echo (!empty($title_team = get_field('title_team'))) ? '<h2 class="team__title h2"> ' . wp_kses_post($title_team) . ' </h2>' : ''; ?>

@@ -31,4 +31,14 @@
             grid-template-columns: 100%;
         }
     }
+
+    &__filters {
+        padding: 20px;
+        border-radius: 4px;
+
+        &__title {
+            color: $dark-grey;
+            font-weight: 600;
+        }
+    }
 }

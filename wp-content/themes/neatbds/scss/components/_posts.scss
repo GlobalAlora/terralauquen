@@ -3,11 +3,12 @@
         @include fade(-50px, 0, true, 1);
 
         span {
-            color: $third-color;
+            color: $primary-color;
         }
     }
 
     &__text {
+        color: $light-black;
         width: 500px;
         max-width: 100%;
         margin-top: 12px;
@@ -47,8 +48,16 @@
 
         &__title {
             text-transform: uppercase;
-            margin-top: 5px;
+            margin-top: 8px;
             font-weight: 600;
+            color: $dark-grey;
+            text-align: center;
+        }
+
+        &__position {
+            color: $light-black;
+            margin-top: 3px;
+            text-align: center;
         }
     }
 }

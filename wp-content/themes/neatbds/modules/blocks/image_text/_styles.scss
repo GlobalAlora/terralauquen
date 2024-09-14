@@ -34,7 +34,6 @@
     }
 
     &__text {
-        color: $black;
         margin-top: 20px;
 
         @include fade(-50px, 0, true, 1);

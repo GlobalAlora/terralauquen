@@ -6,17 +6,18 @@ $secondary-font: 'Lora', serif !default;
 // colores principales
 $primary-color: #295e8c !default;  // color base, usar titulos o botones importantes
 $secondary-color: #176332 !default;  // elementos secundarios o detalles
-$third-color: #892c25 !default; // elementos clave, action buttons o alertas
+$third-color: #a0342c !default; // elementos clave, action buttons o alertas
 // complementarios
-$light-black: #4d4d4d !default; // Usar para subtitulos o encabezados menores
-$dark-grey: #333333 !default; // Usar para titulos principales
+$light-black: #4d4d4d !default; // Usar para subtitulos o encabezados menores -- si se usa
+$dark-grey: #333333 !default; // Usar para titulos principales  -- si se usa
 // background
 $light-primary: #e0eff6 !default; // complementario con $primary-color
 $light-secondary: #e6f5e9 !default; // complementario con $secondary-color
 $grey: #f4f4f4 !default; // secciones neutras o transicion, antes #dddddd
+$natural: #faf7f0 !default; // se usaba antes
 //textos
-$light-black: #555555 !default; // paragraph
-$mid-grey: #777777 !default; // descripciones o detalles menores
+$light-black: #555555 !default; // paragraph  -- no se usa
+$mid-grey: #777777 !default; // descripciones o detalles menores -- si se usa
 // basicos
 $white: #ffffff !default;
 $black: #000 !default;
@@ -61,16 +62,6 @@ $font-sizes-mobile: (
   'h6': 12px,
   'h7': 10px,
   ) !default;
-
-$font-weights: (
-  'light': 300,
-  'regular': 400,
-  'medium': 500,
-  'semibold': 600,
-  'demi': 600,
-  'bold': 700,
-  ) !default;
-
 
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels

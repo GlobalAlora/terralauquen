@@ -20,7 +20,7 @@ html {
 body {
   @include default-font();
   font-size: 16px;
-  color: $primary-color;
+  color: $light-black;
 
   img {
     max-width: 100%;

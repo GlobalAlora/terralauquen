@@ -73,7 +73,6 @@
 
     &__text {
         width: 100%;
-        color: $black;
         @include text_block();
         @include fade(50px, 0, true, 3);
     }

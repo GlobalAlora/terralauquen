@@ -17,4 +17,12 @@
 
 .button {
   @include button();
+
+  &--blue {
+    background: $primary-color;
+
+    &:hover {
+      background: $secondary-color;
+    }
+  }
 }

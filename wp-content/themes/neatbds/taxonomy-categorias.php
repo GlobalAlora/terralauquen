@@ -63,7 +63,7 @@ $button_title = get_field('button_title', 'option');?>
                         <?php if ($pdf_file) {
                             $pdf_url = $pdf_file['url'];                        
                             $button_title = $button_title ? $button_title : 'Descargar PDF';
-                            echo '<a href="' . esc_url($pdf_url) . '" download class="product-link button">' . esc_html($button_title) . '</a>';
+                            echo '<a href="' . esc_url($pdf_url) . '" download class="product-link button button--blue">' . esc_html($button_title) . '</a>';
                         } ?>
                     </div>
                     <?php

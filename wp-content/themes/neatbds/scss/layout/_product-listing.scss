@@ -42,3 +42,18 @@
         }
     }
 }
+
+.filters-list {
+    margin-top: 20px;
+
+    li {
+        a {
+            text-decoration: none;
+            color: $dark-grey;
+
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}

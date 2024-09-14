@@ -9,18 +9,15 @@
 
 get_header();
 ?>
-<section class="error-404 not-found jk">
-	<header class="page-header">
-		<h1 class="page-title">
-			<?php esc_html_e('That page can&rsquo;t be found.', 'neatbds'); ?>
-		</h1>
-	</header><!-- .page-header -->
-
-	<div class="page-content">
-		<p>
-			<?php esc_html_e('It looks like nothing was found at this location.', 'neatbds'); ?>
-		</p>
-	</div><!-- .page-content -->
+<section class="error-404 not-found">
+	<div class="container">
+		<div class="page-content">
+			<h1 class="page-title h3">
+				<?php esc_html_e('Parece que esta página no existe', 'neatbds'); ?>
+			</h1>
+			<a href="/" class="button button--blue">Ir a la página principal</a>
+		</div><!-- .page-content -->
+	</div>
 </section><!-- .error-404 -->
 
 

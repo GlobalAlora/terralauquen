@@ -1,0 +1,5 @@
+.paragraph {
+    &__cont {
+        @include text_block();
+    }
+}

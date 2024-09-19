@@ -12,8 +12,8 @@
 
         &--izquierda {
             .image_text__images-cont {
-                    order: -1;
-                    @include fade(-50px, 0, true, 1);
+                order: -1;
+                @include fade(-50px, 0, true, 1);
             }
 
             .two-images {
@@ -33,9 +33,12 @@
         }
     }
 
-    &__text {
-        margin-top: 20px;
+    &__title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
+    &__text {
         @include fade(-50px, 0, true, 1);
     }
 

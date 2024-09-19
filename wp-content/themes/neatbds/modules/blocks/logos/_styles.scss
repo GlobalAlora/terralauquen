@@ -14,8 +14,12 @@
 
         &__item {
             flex: 1 1 10%;
-            padding-top: 9%;
+            padding-top: 10%;
             position: relative;
+
+            img {
+                object-fit: contain;
+            }
 
             &:hover img {
                 filter: grayscale(100%);

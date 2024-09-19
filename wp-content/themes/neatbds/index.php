@@ -16,30 +16,27 @@ get_header();
 
 if (have_posts()):
 
-	if (is_home() && !is_front_page()):
-		?>
+	if (is_home() && !is_front_page()): ?>
 		<header>
 			<h1 class="page-title screen-reader-text">
 				<?php the_title(); ?>
 			</h1>
 		</header>
 		<?php
-	endif;
+	endif;?>
 
-	/* Start the Loop */
-	while (have_posts()):
-		the_post();
+	<section class="blogs">
+		<div class="container">
+			<div class="blogs__cont">
+			<?php while (have_posts()):
+				the_post(); 
+				get_template_part('modules/posts/item');
+			endwhile;?>
+		    </div>
+		</div>
+	</section>
 
-		/*
-		 * Include the Post-Type-specific template for the content.
-		 * If you want to override this in a child theme, then include a file
-		 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-		 */
-		get_template_part('modules/posts/item');
-
-	endwhile;
-
-	the_posts_navigation();
+	<?php the_posts_navigation();
 
 else:
 

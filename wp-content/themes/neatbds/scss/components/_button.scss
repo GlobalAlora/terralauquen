@@ -19,6 +19,7 @@
   @include button();
 
   &--blue {
+    @include button();
     background: $primary-color;
 
     &:hover {

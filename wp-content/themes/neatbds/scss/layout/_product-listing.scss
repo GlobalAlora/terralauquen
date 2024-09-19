@@ -33,12 +33,13 @@
     }
 
     &__filters {
-        padding: 20px;
-        border-radius: 4px;
+        padding: 0;
 
         &__title {
             color: $dark-grey;
             font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid $dark-grey;
         }
     }
 }
@@ -55,5 +56,81 @@
                 color: $black;
             }
         }
+    }
+}
+
+.facetwp {
+    &-facet-categories {
+        margin-top: 20px;
+    }
+
+    &-display-value {
+        color: $dark-grey;
+    }
+
+    &-checkbox {
+        // background-image: ;
+
+        &.checked {
+            // background-image: ;
+        }
+    }
+
+    &-template {
+        .fwpl {
+            &-layout.el-hkhimk {
+                grid-template-columns: repeat(3, 1fr);
+
+                @include responsive('desktop-s') {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @include responsive('mobile-v') {
+                    grid-template-columns: 100%;
+                }
+            }
+        
+            &-col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding-bottom: 14px;
+                transition: all .3s ease;
+                border-radius: 15px;
+
+                &:hover {
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(41, 94, 140, 0.5);
+
+                    .fwpl-item img {
+                        opacity: 1;
+                    }
+                }
+            }
+        
+            &-item {
+                a {
+                    @extend .button--blue;
+                    display: block;
+                }
+
+                img {
+                    max-width: 200px !important;
+                    aspect-ratio: 3/4 !important;
+                    object-fit: contain;
+                    opacity: .9;
+                }
+
+                &.el-pmpw6 {
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &-counter,
+    &-expand {
+        display: none;
     }
 }

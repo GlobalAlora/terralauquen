@@ -23,7 +23,7 @@ do_action( 'neatbds_pre_render_block', $block );
 $paragraph = get_field('paragraph');
 if($paragraph): ?>
     <section class="paragraph bg--white">
-        <div class="container">
+        <div class="container container--small">
             <div class="paragraph__cont">
                 <?php echo wp_kses_post($paragraph); ?>
             </div>

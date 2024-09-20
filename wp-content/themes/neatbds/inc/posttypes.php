@@ -81,6 +81,6 @@ register_taxonomy(
 		'show_ui' => true,
 		'show_in_nav_menus' => true,
 		'show_tagcloud' => false,
-		'rewrite' => array('slug' => 'Categorias'),
+		'rewrite' => array('slug' => 'categorias'),
 	)
 );

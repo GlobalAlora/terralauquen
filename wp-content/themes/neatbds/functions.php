@@ -68,9 +68,17 @@ require get_template_directory() . '/inc/theme.php';
 require get_template_directory() . '/inc/posttypes.php';
 require get_template_directory() . '/inc/acf-fields.php';
 require get_template_directory() . '/inc/blocks.php';
+require get_template_directory() . '/inc/product.php';
 
 $files = glob(get_template_directory() . '/inc/wp_functions/*.php');
 
 foreach ($files as $file) {
 	if ( basename($file)[0] != "_" )	require $file;
 }
+
+
+function add_custom_scripts() {
+	wp_enqueue_script( 'ajax_term', get_stylesheet_directory_uri() . '/ajax/ajax-terms.js', array('jquery'), NULL, true );
+	wp_localize_script( 'ajax_term', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));    
+}
+	add_action( 'wp_enqueue_scripts', 'add_custom_scripts' );

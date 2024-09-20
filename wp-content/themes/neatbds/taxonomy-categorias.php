@@ -8,45 +8,65 @@ $button_title = get_field('button_title', 'option');?>
     <div class="container">
         <h1 class="products-listing__title h2"><?php echo esc_html($term->name); ?></h1>
         <div class="products-listing__cont">
-            <div class="products-listing__filters">
-                <div class="products-listing__filters__title h6">Filtrar productos</div>
-                <?php
-                $parent_term_id = $term->parent ? $term->parent : $term->term_id;
-                $args = array(
-                    'taxonomy' => 'categorias',
-                    'hide_empty' => false,
-                    'parent' => $parent_term_id,
-                );
-                $subcategories = get_terms($args);
-                if (!empty($subcategories) && !is_wp_error($subcategories)) {
-                    echo '<ul class="filters-list">';
-                    foreach ($subcategories as $subcategory) {
-                        $subcategory_link = get_term_link($subcategory);
-                        echo '<li class="fiilters-list__parent"><a href="' . esc_url($subcategory_link) . '">' . esc_html($subcategory->name) . '</a></li>';
+            <div class="products__filter">
+                <h3>Filtrar por Categorías</h3>
+                <form id="filter-form">
+                    <?php
+                    $parent_id = ($term->parent == 0) ? $term->term_id : $term->parent;
+                    $child_categories = get_terms(array(
+                        'taxonomy' => 'categorias',
+                        'hide_empty' => false,
+                        'parent' => $parent_id,
+                    ));
 
-                        $child_args = array(
-                            'taxonomy' => 'categorias',
-                            'hide_empty' => false,
-                            'parent' => $subcategory->term_id,
-                        );
-                        $child_categories = get_terms($child_args);
+                    if (!empty($child_categories)) {
+                        echo '<ul>';
+                        foreach ($child_categories as $child_category) {
+                            echo '<li>';
+                            echo '<label><input type="checkbox" name="category[]" value="' . $child_category->term_id . '"> ' . esc_html($child_category->name) . '</label>';
 
-                        if (!empty($child_categories) && !is_wp_error($child_categories)) {
-                            echo '<ul class="filters-list__children">';
-                            foreach ($child_categories as $child_category) {
-                                $child_category_link = get_term_link($child_category);
-                                echo '<li><a href="' . esc_url($child_category_link) . '">' . esc_html($child_category->name) . '</a></li>';
+                            $subcategories = get_terms(array(
+                                'taxonomy' => 'categorias',
+                                'hide_empty' => false,
+                                'parent' => $child_category->term_id,
+                            ));
+
+                            if (!empty($subcategories)) {
+                                echo '<ul>';
+                                foreach ($subcategories as $subcategory) {
+                                    echo '<li>';
+                                    echo '<label><input type="checkbox" name="category[]" value="' . $subcategory->term_id . '"> ' . esc_html($subcategory->name) . '</label>';
+
+                                    $sub_subcategories = get_terms(array(
+                                        'taxonomy' => 'categorias',
+                                        'hide_empty' => false,
+                                        'parent' => $subcategory->term_id,
+                                    ));
+
+                                    if (!empty($sub_subcategories)) {
+                                        echo '<ul>';
+                                        foreach ($sub_subcategories as $sub_subcategory) {
+                                            echo '<li>';
+                                            echo '<label><input type="checkbox" name="category[]" value="' . $sub_subcategory->term_id . '"> ' . esc_html($sub_subcategory->name) . '</label>';
+                                            echo '</li>';
+                                        }
+                                        echo '</ul>';
+                                    }
+
+                                    echo '</li>';
+                                }
+                                echo '</ul>';
                             }
-                            echo '</ul>';
-                        }
-                    }
 
-                    echo '</ul>';
-                } else {
-                    echo '<p>No hay subcategorías disponibles.</p>';
-                }
-                ?>
-                </div>
+                            echo '</li>';
+                        }
+                        echo '</ul>';
+                    }
+                    ?>
+                    <button id="go-back">Volver Atrás</button>
+                    <button type="button" id="clear-filters" class="clear-button">Limpiar Filtros</button>
+                </form>
+            </div>
 
             <?php
             $args = array(
@@ -56,6 +76,7 @@ $button_title = get_field('button_title', 'option');?>
                         'taxonomy' => 'categorias',
                         'field' => 'term_id',
                         'terms' => $term->term_id,
+                        'include_children' => true,
                     ),
                 ),
             );
@@ -63,13 +84,11 @@ $button_title = get_field('button_title', 'option');?>
 
             if ($productos_query->have_posts()) {
                 echo '<div class="products-listing__grid" id="products-grid">';
-                $button_title = get_field('button_title', 'options');
                 while ($productos_query->have_posts()) {
                     $productos_query->the_post();
                     $pdf_para_descargar = get_field('pdf_para_descargar'); 
                     if ($pdf_para_descargar) {
                         $pdf_url = $pdf_para_descargar['url']; 
-                        $pdf_title = $pdf_para_descargar['title'];
                     } ?>
                     
                     <div class="product-item">
@@ -98,7 +117,4 @@ $button_title = get_field('button_title', 'option');?>
     </div>
 </section>
 
-
-<?php
-get_footer(); // Incluir el pie de página del tema
-?>
+<?php get_footer(); ?>

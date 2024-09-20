@@ -53,3 +53,31 @@
     margin-top: 113px;
   }
 }
+
+body:not(:has(.hero)) {
+  padding-top: 110px;
+
+  @include responsive('mobile-v') {
+    padding-top: 76px;
+  }
+
+  &:not(.scrolled) {
+    .header {
+      background: $primary-color;
+    }
+
+    .search-field {
+      outline: 1px solid $primary-color;
+      color: $primary-color;
+      background: $white;
+  
+      &::placeholder {
+        color: $primary-color;
+      }
+    }
+  
+    .search-submit {
+      filter: none;
+    }
+  }
+}

@@ -1,8 +1,21 @@
 .blogs {
     &__cont {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 40px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+
+        @include responsive('desktop-s') {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include responsive('tablet-h') {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        @include responsive('mobile-v') {
+            grid-template-columns: 100%;
+        }
     }
 
     .post-item {

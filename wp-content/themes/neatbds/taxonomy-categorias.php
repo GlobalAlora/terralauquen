@@ -4,13 +4,13 @@ get_header();
 $term = get_queried_object(); 
 $button_title = get_field('button_title', 'option');?>
 
-<section class="products-listing bg--white">
+<section class="products-listing bg--natural">
     <div class="container">
         <h1 class="products-listing__title h2"><?php echo esc_html($term->name); ?></h1>
         <div class="products-listing__cont">
-            <div class="products__filter">
-                <h3>Filtrar por Categorías</h3>
-                <form id="filter-form">
+            <div class="products-listing__filters">
+                <h3 class="products-listing__filters__title h4">Filtrar por Categorías</h3>
+                <form class="products-listing__filters__list" id="filter-form">
                     <?php
                     $parent_id = ($term->parent == 0) ? $term->term_id : $term->parent;
                     $child_categories = get_terms(array(
@@ -63,8 +63,10 @@ $button_title = get_field('button_title', 'option');?>
                         echo '</ul>';
                     }
                     ?>
-                    <button id="go-back">Volver Atrás</button>
-                    <button type="button" id="clear-filters" class="clear-button">Limpiar Filtros</button>
+                    <div class="products-listing__filters__buttons">
+                        <button id="go-back" class="button button">Volver Atrás</button>
+                        <button type="button" id="clear-filters" class="button button">Limpiar Filtros</button>
+                    </div>
                 </form>
             </div>
 

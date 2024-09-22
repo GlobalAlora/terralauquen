@@ -68,11 +68,27 @@
         flex-direction: column;
         align-items: center;
         gap: 12px;
+        padding-bottom: 14px;
+        transition: all .3s ease;
+        border-radius: 15px;
+
+        &:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(41, 94, 140, 0.5);
+
+            img {
+                opacity: 1;
+            }
+        }
     }
 
     &-image {
-        aspect-ratio: 5/3;
+        aspect-ratio: 1;
         position: relative;
         width: 100%;
+
+        img {
+            object-fit: contain;
+            opacity: .9;
+        }
     }
 }

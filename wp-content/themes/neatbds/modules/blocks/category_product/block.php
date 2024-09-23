@@ -23,7 +23,6 @@ do_action( 'neatbds_pre_render_block', $block ); ?>
 
 <section class="product-categories bg--white">
     <div class="container">
-        <h1 class="product-categories__title h2"><?php echo the_title(); ?></h1>
         <?php
         $terms = get_terms(array(
             'taxonomy' => 'categorias',

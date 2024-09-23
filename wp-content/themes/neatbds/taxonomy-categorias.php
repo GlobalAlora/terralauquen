@@ -9,7 +9,7 @@ $button_title = get_field('button_title', 'option');?>
         <h1 class="products-listing__title h2"><?php echo esc_html($term->name); ?></h1>
         <div class="products-listing__cont">
             <div class="products-listing__filters">
-                <h3 class="products-listing__filters__title h4">Filtrar por Categorías</h3>
+                <h3 class="products-listing__filters__title h4">Filtrar Productos</h3>
                 <form class="products-listing__filters__list" id="filter-form">
                     <?php
                     $parent_id = ($term->parent == 0) ? $term->term_id : $term->parent;

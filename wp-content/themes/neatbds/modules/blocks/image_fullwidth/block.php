@@ -23,7 +23,7 @@ do_action( 'neatbds_pre_render_block', $block );
 $imagen_o_video = get_field('imagen_o_video'); 
 $imagevideo_class = $imagen_o_video == 'imagen' ? 'imagen' : 'video'; ?>
 
-<section class="image_fullwidth image_fullwidth--<?php echo esc_attr($imagevideo_class); ?> bg--white" data-waypoint=".25">
+<section class="image_fullwidth image_fullwidth--<?php echo esc_attr($imagevideo_class); ?>" data-waypoint=".25">
     <?php if ($imagen_o_video == 'imagen'):?>
         <div class="image_fullwidth__image">
             <div class="image-background">

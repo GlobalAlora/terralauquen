@@ -8,6 +8,7 @@ add_action('wp_enqueue_scripts', function(){
         'action' => 'filter_products' 
     ));
 });
+
 function ajax_filter_products() {
     $categories = isset($_POST['categories']) ? array_map('intval', $_POST['categories']) : array();
 
@@ -16,7 +17,17 @@ function ajax_filter_products() {
         'posts_per_page' => -1,
     );
 
-    if (!empty($categories) && !in_array(0, $categories)) {
+    if (empty($categories) || (count($categories) === 1 && in_array(0, $categories))) {
+        $term = get_queried_object(); 
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'categorias',
+                'field' => 'term_id',
+                'terms' => $term->term_id,
+                'include_children' => true,
+            ),
+        );
+    } else {
         $args['tax_query'] = array(
             array(
                 'taxonomy' => 'categorias',
@@ -54,6 +65,7 @@ function ajax_filter_products() {
     wp_reset_postdata();
     die();
 }
+
 
 add_action('wp_ajax_filter_products', 'ajax_filter_products');
 add_action('wp_ajax_nopriv_filter_products', 'ajax_filter_products');

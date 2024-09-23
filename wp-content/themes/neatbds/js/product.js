@@ -27,6 +27,8 @@ jQuery(document).ready(function ($) {
         $('#filter-form input[type="checkbox"]').prop('checked', false);
         window.location.href = window.location.pathname;
     });
+
+
     $('#go-back').on('click', function () {
         window.location.href = '/nuestros-productos';
     });

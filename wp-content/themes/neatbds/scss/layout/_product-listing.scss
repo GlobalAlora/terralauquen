@@ -42,7 +42,7 @@
 
         &__list {
             margin-top: 20px;
-            
+
             ul {
                 &:first-child {
                     margin: 20px 0;
@@ -55,7 +55,7 @@
                     margin: 10px 0;
                 }
             }
-        
+
             li {
                 margin-bottom: 8px;
                 margin-left: 10px;
@@ -79,32 +79,35 @@
                     appearance: none;
                     width: 16px;
                     height: 16px;
-                    background-color: #ffffff; /* Fondo blanco */
-                    border: 2px solid #295e8c; /* Borde azul */
+                    background-color: #ffffff;
+                    /* Fondo blanco */
+                    border: 2px solid #295e8c;
+                    /* Borde azul */
                     border-radius: 4px;
                     cursor: pointer;
                     position: relative;
-                    
+
                     &:checked {
-                      background-color: #295e8c; /* Fondo azul al estar seleccionado */
+                        background-color: #295e8c;
+                        /* Fondo azul al estar seleccionado */
                     }
-                    
+
                     /* Estilo de la marca de verificación */
                     &:checked::before {
-                      content: '';
-                      position: absolute;
-                      top: 50%;
-                      left: 25%;
-                      width: 4px;
-                      height: 8px;
-                      border: solid #ffffff;
-                      border-width: 0 2px 2px 0;
-                      transform: rotate(45deg) translate(-50%, -50%);
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 25%;
+                        width: 4px;
+                        height: 8px;
+                        border: solid #ffffff;
+                        border-width: 0 2px 2px 0;
+                        transform: rotate(45deg) translate(-50%, -50%);
                     }
-                  
+
                     /* Efecto hover */
                     &:hover {
-                      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
                     }
                 }
             }
@@ -116,7 +119,8 @@
             flex-wrap: wrap;
             gap: 10px;
 
-            button {
+            button,
+            a {
                 padding: 6px 10px;
             }
         }

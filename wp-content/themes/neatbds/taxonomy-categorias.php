@@ -64,7 +64,7 @@ $button_title = get_field('button_title', 'option');?>
                     }
                     ?>
                     <div class="products-listing__filters__buttons">
-                        <button id="go-back" class="button button">Volver Atrás</button>
+                        <a href="/nuestros-productos" class="button">Volver Atrás</a>
                         <button type="button" id="clear-filters" class="button button">Limpiar Filtros</button>
                     </div>
                 </form>

@@ -99,3 +99,46 @@
     filter: none;
   }
 }
+
+
+// Search results
+.search {
+  .page-header {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .page-title span {
+    color: $primary-color;
+  }
+
+  .grid-cont {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+    @include responsive('desktop-s') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include responsive('tablet-h') {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    @include responsive('mobile-v') {
+        grid-template-columns: 100%;
+    }
+
+    .post-item {
+      &__image {
+          aspect-ratio: .9;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 80%;
+      }
+    }
+  }
+}

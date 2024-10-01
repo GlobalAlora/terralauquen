@@ -1,4 +1,8 @@
 .services {
+    &__heading {
+        margin-bottom: 30px;
+    }
+
     &__cont {
         display: flex;
         flex-direction: column;
@@ -8,7 +12,7 @@
     }
 
     &__item {
-        border-bottom: 1px solid lighten($primary-color, .2);
+        border-bottom: 1px solid $black;
         padding-bottom: 20px;
 
         &:last-of-type {
@@ -21,7 +25,13 @@
         }
 
         &.js-active {
+            border-color: $primary-color;
+
             .services {
+                &__title {
+                    color: $primary-color;
+                }
+
                 &__text {
                     opacity: 1;
                     max-height: 100%;

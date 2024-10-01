@@ -26,6 +26,9 @@ if($servicios):
 
     <section class="services bg--white">
         <div class="container container--small">
+            <?php if($title = get_field('title')): ?>
+                <h2 class="services__heading h2"><?php echo esc_html($title);?></h2>
+            <?php endif; ?>
             <div class="services__cont bg--natural">
                 <?php foreach($servicios as $item): ?>
                     <div class="services__item js-open-block">

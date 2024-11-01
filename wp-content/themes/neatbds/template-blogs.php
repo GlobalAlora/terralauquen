@@ -12,7 +12,7 @@ $args = array(
 $team = new WP_Query($args);
 ?>
 
-<section class="blogs bg--white">
+<section class="blogs bg--natural">
     <div class="container">
         <div class="blogs__cont">
         <?php if ($team->have_posts()): ?>

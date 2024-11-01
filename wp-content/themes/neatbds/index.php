@@ -25,7 +25,7 @@ if (have_posts()):
 		<?php
 	endif;?>
 
-	<section class="blogs bg--white">
+	<section class="blogs bg--natural">
 		<div class="container">
 			<div class="blogs__cont">
 			<?php while (have_posts()):

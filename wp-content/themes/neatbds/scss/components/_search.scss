@@ -1,6 +1,8 @@
 .site-search {
   position: relative;
   width: 30px;
+  top: 2px;
+
 
   &__icon {
     width: 25px;
@@ -29,8 +31,7 @@
       pointer-events: all;
     }
 
-    label {
-    }
+    label {}
 
     .search-field {
       width: calc(100% - 25px);
@@ -119,25 +120,25 @@
     gap: 40px;
 
     @include responsive('desktop-s') {
-        grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @include responsive('tablet-h') {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
 
     @include responsive('mobile-v') {
-        grid-template-columns: 100%;
+      grid-template-columns: 100%;
     }
 
     .post-item {
       &__image {
-          aspect-ratio: .9;
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 80%;
+        aspect-ratio: .9;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80%;
       }
     }
   }

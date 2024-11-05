@@ -1,0 +1,39 @@
+.information {
+    &__content {
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+
+        @include responsive('tablet-h') {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+    }
+
+    &__cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 80px;
+        height: auto;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        flex: 1;
+    }
+}

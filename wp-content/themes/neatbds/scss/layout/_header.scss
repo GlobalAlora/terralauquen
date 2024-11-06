@@ -63,7 +63,7 @@ body:not(:has(.hero)) {
 
   &:not(.scrolled) {
     .header {
-      background: $primary-color;
+      background: darken($primary-color, 10%);
     }
 
     .search-field {

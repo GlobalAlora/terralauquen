@@ -33,11 +33,25 @@
                 }
 
                 &__text {
-                    opacity: 1;
-                    max-height: 100%;
-                    transition: all 200ms linear;
-                    will-change: opacity, max-height;
-                    visibility: visible;
+                    animation: slide-down .3s linear forwards;
+
+                    @keyframes slide-down {
+                        0% {
+                            opacity: 0;
+                            max-height: 0;
+                            visibility: hidden;
+                        }
+                        50% {
+                            opacity: .5;
+                            max-height: 50%;
+                            visibility: visible;
+                        }
+                        100% {
+                            opacity: 1;
+                            max-height: 100%;
+                            visibility: visible;
+                        }
+                    }
                 }
 
                 &__icon {
@@ -61,7 +75,6 @@
         opacity: 0;
         overflow: hidden;
         max-height: 0;
-        transition: opacity 200ms linear, max-height 200ms linear;
         will-change: opacity, max-height;
         visibility: hidden;
         padding-right: 30px;

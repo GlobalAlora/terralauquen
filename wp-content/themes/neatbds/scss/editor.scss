@@ -1,8 +1,8 @@
 @charset 'UTF-8';
-$editor-sidebar-background: #094a58;
-$editor-accent-color: #bc0a65;
-$editor-adminbar: darken($editor-sidebar-background, 10);
-$editor-logo-aspect-ratio: 337/78;
+$editor-sidebar-background: darken(#295e8c, 10);
+$editor-accent-color: #a0342c;
+$editor-adminbar: darken($editor-sidebar-background, 15);
+$editor-logo-aspect-ratio: 744/288;
 
 $editor: "true";
 
@@ -19,7 +19,7 @@ Admin Styles
 body:not(.folded) {
   #adminmenuwrap {
     &:before {
-      background-image: url(images/admin/logo_editor.svg);
+      background-image: url(../images/admin/logo_login.svg);
       background-size: cover;
       width: 80%;
       height: auto;
@@ -27,6 +27,7 @@ body:not(.folded) {
       content: "";
       display: block;
       margin: 20px auto 20px;
+      filter: brightness(100);
     }
   }
 }

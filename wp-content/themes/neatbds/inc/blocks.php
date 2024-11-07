@@ -276,7 +276,7 @@ function wrap_classic_block( $block_content, $block )
     }
 
     if ($block['blockName'] == "") { // clasic
-        $block_content_return = '<div class="container default_block classic">';
+        $block_content_return = '<div class="container container--small default_block text_block">';
         $block_content_return .= $block_content;
         $block_content_return .= '</div>';
 

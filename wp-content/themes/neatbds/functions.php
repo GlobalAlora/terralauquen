@@ -82,3 +82,12 @@ function add_custom_scripts() {
 	wp_localize_script( 'ajax_term', 'wpAjax', array('ajaxUrl' => admin_url('admin-ajax.php')));    
 }
 	add_action( 'wp_enqueue_scripts', 'add_custom_scripts' );
+
+add_filter('use_block_editor_for_post', 'disable_gutenberg_for_posts', 10, 2);
+
+function disable_gutenberg_for_posts($use_block_editor, $post) {
+    if ($post->post_type === 'post') {
+        return false; 
+    }
+    return $use_block_editor; 
+}

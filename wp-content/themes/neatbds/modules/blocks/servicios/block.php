@@ -29,7 +29,7 @@ if($servicios):
             <?php if($title = get_field('title')): ?>
                 <h2 class="services__heading h2"><?php echo esc_html($title);?></h2>
             <?php endif; ?>
-            <div class="services__cont bg--blue">
+            <div class="services__cont bg--grey">
                 <?php foreach($servicios as $item): ?>
                     <div class="services__item js-open-block">
                         <?php if (!empty($item['title'])): ?>

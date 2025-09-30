@@ -18,6 +18,7 @@
 			</div>
 			<div class="site-footer__copyright">
 				<?php get_template_part('modules/components/copyright'); ?>
+				<p class="site-footer__alora">Sitio Realizado por <a href="https://globalalora.com" target="_blank">Global Alora</a></p>
 			</div>
 		</div>
 	</div>

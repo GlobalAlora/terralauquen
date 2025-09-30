@@ -18,11 +18,26 @@
 
   &__copyright {
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     .copyright {
       padding-top: 20px;
       color: $white !important;
       border-top: 1px solid $white;
+    }
+
+    .site-footer__alora {
+      color: $white;
+
+      a {
+        color: $white;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
   }
 
